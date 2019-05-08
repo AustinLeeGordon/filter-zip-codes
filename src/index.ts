@@ -1,17 +1,33 @@
 import * as P from 'bluebird';
 import { csvToJson, jsonToCsv } from './utils';
 
-export function filterZipCodes(zips: Array<number | string>) {
+export interface filterZipCodesOptions {
+    keep?: boolean
+}
+
+export function filterZipCodes(zips: Array<number | string>, options?: filterZipCodesOptions) {
     zips = zips.map(zip => String(zip));
+
+    options = Object.assign({
+        keep: false,
+    }, options);
 
     function filter(zip: string | number): boolean {
         zip = String(zip);
         // Remove 4-digit extensions
         zip = zip.split('-')[0];
-        if (zips.indexOf(zip) >= 0) {
+        let matchIndex = zips.indexOf(zip);
+        if (options.keep) {
+            if (matchIndex >= 0) {
+                return true;
+            }
             return false;
+        } else {
+            if (matchIndex >= 0) {
+                return false;
+            }
+            return true;
         }
-        return true;
     }
 
     return {

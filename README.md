@@ -1,18 +1,25 @@
 # filter-zip-codes
 
-Remove unwanted zip/postal codes from CSV and JSON data.
+Keep or remove zip/postal codes from CSV and JSON data.
 
 ## Usage
 
 ```js
 // From CSV
 await filterZipCodes(
-    [12345, 67890] // Array of zip codes
+    // Array of zip codes
+    [12345, 67890],
+    // Options
+    {
+        // Keep the zip codes provided (true) or remove them (false)
+        // Default: false
+        keep: false,
+    }
 ).fromCsv(csvString, headerString);
 
 // From JSON
 filterZipCodes(
-    [12345, 67890] // Array of zip codes
+    [12345, 67890]
 ).fromJson(jsonString, keyString);
 ```
 

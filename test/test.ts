@@ -41,6 +41,17 @@ describe("filterZipCodes", () => {
             expect(match).toEqual(-1);
         })
     });
+    test("should keep provided zip codes instead of removing", () => {
+        const zips = [
+            60681,
+            94263,
+        ];
+        const filtered = filterZipCodes(zips, { keep: true }).fromJson(jsonData, 'zip_code');
+        zips.forEach(zip => {
+            let match = filtered.indexOf(String(zip));
+            expect(match).toBeGreaterThanOrEqual(0);
+        })
+    });
     test("should accept zips as string", () => {
         const zips = [
             '60681',

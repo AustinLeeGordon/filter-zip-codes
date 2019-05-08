@@ -1,7 +1,7 @@
 {
   "name": "filter-zip-codes",
   "version": "1.0.0",
-  "description": "Remove unwanted zip/postal codes from CSV and JSON data.",
+  "description": "Keep or remove zip/postal codes from CSV and JSON data.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
