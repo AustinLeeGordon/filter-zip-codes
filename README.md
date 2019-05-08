@@ -1,5 +1,7 @@
 # filter-zip-codes
 
+[![Current npm package version](https://img.shields.io/npm/v/filter-zip-codes.svg)](https://www.npmjs.com/package/filter-zip-codes) [![Build Status](https://travis-ci.com/austinleegordon/filter-zip-codes.svg?branch=master)](https://travis-ci.com/austinleegordon/filter-zip-codes)
+
 Keep or remove zip/postal codes from CSV and JSON data.
 
 ## Usage
