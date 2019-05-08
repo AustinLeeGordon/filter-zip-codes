@@ -58,7 +58,6 @@ describe("filterZipCodes", () => {
             '49018',
         ];
         const filtered = filterZipCodes(zips).fromJson(plusFourData, 'zip_code');
-        console.log(filtered);
         zips.forEach(zip => {
             let match = filtered.indexOf(zip);
             expect(match).toEqual(-1);

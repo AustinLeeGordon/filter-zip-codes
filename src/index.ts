@@ -1,3 +1,4 @@
+import * as P from 'bluebird';
 import { csvToJson, jsonToCsv } from './utils';
 
 export function filterZipCodes(zips: Array<number | string>) {
@@ -14,8 +15,8 @@ export function filterZipCodes(zips: Array<number | string>) {
     }
 
     return {
-        fromCsv: function (csvStr: string, colHeading: string): Promise<string> {
-            return new Promise(async (resolve, reject) => {
+        fromCsv: function (csvStr: string, colHeading: string): PromiseLike<string> {
+            return new P(async (resolve, reject) => {
                 const data = await csvToJson(csvStr);
                 const { json, header } = data;
                 const filtered = json.filter(obj => filter(obj[colHeading]));

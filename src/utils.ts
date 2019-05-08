@@ -1,8 +1,9 @@
 import * as csv from "csvtojson";
+import * as P from "bluebird";
 import { Parser } from "json2csv";
 
-export function csvToJson(str: string, opts: object = { delimiter: [',', '\t'] }): Promise<{ json: { [key: string]: any }, header: string[] }> {
-    return new Promise((resolve, reject) => {
+export function csvToJson(str: string, opts: object = { delimiter: [',', '\t'] }): PromiseLike<{ json: { [key: string]: any }, header: string[] }> {
+    return new P((resolve, reject) => {
         let header;
         csv(opts)
             .fromString(str)
