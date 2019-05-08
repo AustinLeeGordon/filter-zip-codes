@@ -5,6 +5,8 @@ export function filterZipCodes(zips: Array<number | string>) {
 
     function filter(zip: string | number): boolean {
         zip = String(zip);
+        // Remove 4-digit extensions
+        zip = zip.split('-')[0];
         if (zips.indexOf(zip) >= 0) {
             return false;
         }

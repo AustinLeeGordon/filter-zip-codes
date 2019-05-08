@@ -1,0 +1,37 @@
+[
+    {
+      "first_name": "Damita",
+      "last_name": "Souley",
+      "address": "6423 Anderson Street",
+      "state": "Ohio",
+      "zip_code": 44555
+    },
+    {
+      "first_name": "Carmel",
+      "last_name": "Bickerstasse",
+      "address": "8 Ruskin Way",
+      "state": "Michigan",
+      "zip_code": 48919
+    },
+    {
+      "first_name": "Eugen",
+      "last_name": "Kirke",
+      "address": "605 Haas Street",
+      "state": "Illinois",
+      "zip_code": "60681-1234"
+    },
+    {
+      "first_name": "Nicolea",
+      "last_name": "Varne",
+      "address": "86 Mockingbird Avenue",
+      "state": "Texas",
+      "zip_code": 75387
+    },
+    {
+      "first_name": "Egbert",
+      "last_name": "Ulyat",
+      "address": "601 Sherman Point",
+      "state": "Michigan",
+      "zip_code": "49018-5678"
+    }
+]
